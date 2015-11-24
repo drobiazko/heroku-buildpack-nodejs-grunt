@@ -109,15 +109,15 @@ function package_download() {
 }
 
 bootstrap_node=$(mktmpdir bootstrap_node)
-package_download "nodejs" "0.4.7" $bootstrap_node
+package_download "nodejs" "5.1.0" $bootstrap_node
 
 # make some associative arrays
 declare -A engine_versions
 declare -A engine_defaults
 declare -A engine_requests
 
-engine_defaults["node"]="0.10.x"
-engine_defaults["npm"]="1.2.x"
+engine_defaults["node"]="5.1.0"
+engine_defaults["npm"]="3.3.12"
 
 MANIFEST_VERSION_NODE=$(package_engine_version "node")
 echo "Declared node version in package.json: $MANIFEST_VERSION_NODE"
